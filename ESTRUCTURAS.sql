@@ -14,6 +14,7 @@ EXCEPTION
    WHEN NO_DATA_FOUND THEN
       DBMS_OUTPUT.PUT_LINE('No se encontró el empleado.');
 END;
+
 /*✅ 2. Procedimiento*/
 
 CREATE OR REPLACE PROCEDURE saludar_empleado (
@@ -29,6 +30,7 @@ BEGIN
    DBMS_OUTPUT.PUT_LINE('Hola, ' || v_nombre || '!');
 END;
 /* ✅ 3. Función */
+
 CREATE OR REPLACE FUNCTION obtener_salario (
    p_id IN employees.employee_id%TYPE
 ) RETURN NUMBER
